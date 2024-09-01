@@ -1,0 +1,30 @@
+\documentclass[12pt]{article} 
+\usepackage{pstricks,pst-node,pst-tree,lscape} 
+\pagenumbering{gobble} 
+
+\begin{document} 
+
+\begin{figure} \centering 
+\newcommand{\Tgcircle}{\Tcircle[linecolor=black, fillcolor=gray]} 
+\newcommand{\Tgoval}{\Toval[linecolor=black, fillcolor=gray]} 
+\newcommand{\Tgframe}[1]{\Tr{\psframebox[linecolor=black, fillstyle=solid, fillcolor=orange]{#1}}} 
+\psset{nodesep=0.7pt, linecolor=black, treesep=1.2cm, levelsep=1.8cm} 
+\pstree{\Tgcircle{~~}} 
+{ 
+        \pstree{\Tgcircle{~~} \tlput{\color{blue}\texttt{runcr}$\leq 161.9$\hspace{-.6in}}} 
+        { 
+                \Tgframe{4.746542} \nput{d}{\pssucc}{\color{black} \textbf{55}}\tlput{\color{blue} \texttt{yrs}$\leq 3.498$ \hspace{-.3in}} 
+                \Tgframe{5.363026} \nput{d}{\pssucc}{\color{black} \textbf{34}} 
+        }
+        \pstree{\Tgcircle{~~}} 
+        { 
+                \Tgframe{5.748246} \nput{d}{\pssucc}{\color{black} \textbf{25}}\tlput{\color{blue} \texttt{hitcr}$\leq 444.2$ \hspace{-.3in}} 
+                \pstree{\Tgcircle{~~}} 
+                { 
+                        \Tgframe{6.220396} \nput{d}{\pssucc}{\color{black} \textbf{58}}\tlput{\color{blue} \texttt{hit86}$\leq 111.0$ \hspace{-.3in}} 
+                        \Tgframe{6.766495} \nput{d}{\pssucc}{\color{black} \textbf{91}} 
+}}}
+\end{figure} 
+
+
+\end{document} 
